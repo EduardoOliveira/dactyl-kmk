@@ -88,10 +88,10 @@ CL = simple_key_sequence(
 )
 
 
-OSLCTL = KC.OS(KC.LCTRL,tap_time=750)
-OSLSFT = KC.OS(KC.LSFT,tap_time=750)
-OSLALT = KC.OS(KC.LALT,tap_time=750)
-OSLGUI = KC.OS(KC.LGUI,tap_time=750)
+OSLCTL = KC.OS(KC.LCTRL,tap_time=None)
+OSLSFT = KC.OS(KC.LSFT,tap_time=None)
+OSLALT = KC.OS(KC.LALT,tap_time=None)
+OSLGUI = KC.OS(KC.LGUI,tap_time=None)
 
 _ = KC.NO
 xx = KC.TRNS
@@ -100,7 +100,7 @@ keyboard.keymap = [
     [
         KC.ESCAPE,KC.N1,KC.N2,KC.N3,KC.N4,KC.N5,            KC.N6,KC.N7,KC.N8,KC.N9,KC.N0,KC.BSLS,
         KC.GRAVE,KC.Q,KC.W,KC.E,KC.R,KC.T,                  KC.Y,KC.U,KC.I,KC.O,KC.P,KC.EQL,
-        KC.TAB,LCTL_A,LSFT_S,LALT_D,LGUI_F,KC.G,            LGUI_H,LALT_J,LSFT_K,LCTL_L,KC.SCLN,KC.QUOTE,
+        KC.TAB,KC.A,KC.S,KC.D,KC.F,KC.G,                    KC.H,KC.J,KC.K,KC.L,KC.SCLN,KC.QUOTE,
         KC.LSFT,KC.Z,KC.X,KC.C,KC.V,KC.B,                   KC.N,KC.M,KC.COMM,KC.DOT,KC.SLSH,KC.MINS,
         _,_,  KC.LGUI,KC.LCTL,KC.MO(1),_,                   _,KC.MO(2),KC.LBRC,KC.RBRC,_,_,
         _,_,  KC.LSFT,KC.ENTER,KC.SPACE,KC.BSPC,                  KC.ENTER,KC.BSPC,KC.D,KC.C,_,_,
@@ -109,7 +109,7 @@ keyboard.keymap = [
         KC.F1,KC.F2,KC.F3,KC.F4,KC.F5,                      KC.F6,KC.F7,KC.F8,KC.F9,KC.F10,KC.F11,KC.F12,
         xx,xx,KC.MPRV,KC.MPLY,KC.MNXT,KC.VOLU,              KC.HOME,KC.END,xx,xx,xx,xx,
         xx,OSLCTL,OSLSFT,OSLALT,OSLGUI,KC.VOLD,             KC.LEFT,KC.DOWN,KC.UP,KC.RIGHT,xx,xx,
-        xx,xx,xx,xx,xx,KC.MUTE,                             KC.LCTL(KC.LSFT(KC.LEFT)),KC.LCTL(KC.LSFT(KC.RIGHT)),KC.LALT(KC.LEFT),KC.LALT(KC.RIGHT),xx,xx,
+        xx,KC.LCTL(KC.Z),KC.LCTL(KC.X),KC.LCTL(KC.C),KC.LCTL(KC.V),KC.MUTE,                     KC.LCTL(KC.LSFT(KC.LEFT)),KC.LCTL(KC.LSFT(KC.RIGHT)),KC.LALT(KC.LEFT),KC.LALT(KC.RIGHT),xx,xx,
         _,_,xx,xx,KC.MO(1), _,                              _,KC.MO(2),xx,xx,_,_,
         _,_,  xx,xx,xx,xx,                                 xx,KC.DELETE,xx,xx, _,_,
     ],
@@ -126,3 +126,4 @@ keyboard.keymap = [
 
 if __name__ == '__main__':
     keyboard.go()
+
